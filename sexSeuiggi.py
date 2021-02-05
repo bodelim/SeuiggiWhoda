@@ -12,11 +12,11 @@ def POWERSEX(name: str = "승기 [ 모쏠 아다 병신 ]", partner: str = "이�
             count = 0
         count += 1
         if girlIsUpset == True:
-            print('%s: \"야 너무 빨리 쌌잖아\"'%partner)
+            print('{}: \"야(아) 너무 빨리 쌌잖아\"'.format(partner))
             print('{}: \"그.. 다시세워볼까?\"'.format(name))
-            print('자기야 나 부랄이 띵해')
+            print('{}: 자기야 나 부랄이 띵해'.format(partner))
             sex.motelOut()
-            print('{}: \"{}야 다신 만나지말자\"'.format(partner, name))
+            print('{}: \"{}야(아) 다신 만나지말자\"'.format(partner, name))
             break
         if manIsHyunja == True:
             print('하..싸버렸어')
@@ -25,10 +25,13 @@ def POWERSEX(name: str = "승기 [ 모쏠 아다 병신 ]", partner: str = "이�
             sex.setTools(tools)
             print('자기야 도구로 가버리게 해줄께')
             manIsHyunja = False
-            POWERSEX(manIsHyunja)
+            POWERSEX(name, partner, manIsHyunja)
         else:
             rand = random.randrange(1,10)
             manIsHyunja = True
             if rand > 9:
                 girlIsUpset = True
-            POWERSEX(manIsHyunja)
+            POWERSEX(name, partner, manIsHyunja)
+
+POWERSEX()
+print("승기 모쏠 아다")
